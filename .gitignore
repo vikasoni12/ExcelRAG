@@ -1,2 +1,4 @@
 ExcelML-copy
 .venv
+/.vs
+/ExcelRAG
