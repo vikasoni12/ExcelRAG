@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ExcelRAG</RootNamespace>
+    <AssemblyName>ExcelRAG</AssemblyName>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <!-- Add references and packages as needed, following ExcelML template -->
+
+</Project>
