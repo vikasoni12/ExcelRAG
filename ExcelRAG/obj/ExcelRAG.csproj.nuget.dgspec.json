@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\Users\\npepin\\source\\repos\\ExcelRAG\\ExcelRAG\\ExcelRAG.csproj",
         "projectName": "ExcelRAG",
         "projectPath": "C:\\Users\\npepin\\source\\repos\\ExcelRAG\\ExcelRAG\\ExcelRAG.csproj",
-        "packagesPath": "C:\\nuget",
+        "packagesPath": "C:\\Users\\npepin\\.nuget\\packages",
         "outputPath": "C:\\Users\\npepin\\source\\repos\\ExcelRAG\\ExcelRAG\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net48"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net48": {
+            "targetAlias": "net48",
             "projectReferences": {}
           }
         },
@@ -48,22 +48,16 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "ExcelDna.AddIn": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[10.0.1, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"

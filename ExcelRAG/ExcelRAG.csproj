@@ -1,12 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<RootNamespace>ExcelRAG</RootNamespace>
+		<AssemblyName>ExcelRAG</AssemblyName>
+		<UseWindowsForms>true</UseWindowsForms>
+		<PlatformTarget>x64</PlatformTarget>
+		<Prefer32Bit>false</Prefer32Bit>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<RestorePackagesPath>$(UserProfile)\.nuget\packages</RestorePackagesPath>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>ExcelRAG</RootNamespace>
-    <AssemblyName>ExcelRAG</AssemblyName>
-    <OutputType>Library</OutputType>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<StartAction>Program</StartAction>
+		<StartProgram>$(ProgramW6432)\Microsoft Office\root\Office16\EXCEL.EXE</StartProgram>
+		<StartArguments>"$(TargetDir)ExcelRAG-AddIn64.xll"</StartArguments>
+		<StartWorkingDirectory>$(TargetDir)</StartWorkingDirectory>
+		<ExcelDnaPackSkip>true</ExcelDnaPackSkip>
+	</PropertyGroup>
 
-  <!-- Add references and packages as needed, following ExcelML template -->
+	<ItemGroup>
+		<PackageReference Include="ExcelDna.AddIn" Version="1.9.0" />
+		<PackageReference Include="System.Text.Json" Version="10.0.1" />
+	</ItemGroup>
 
+	<ItemGroup>
+		<Reference Include="System.Net.Http" />
+	</ItemGroup>
 </Project>

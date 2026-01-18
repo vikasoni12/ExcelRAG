@@ -1,3 +1,9 @@
 ExcelML-copy
 .venv
 /.vs
+
+# Ignore build output directories for all .NET projects
+bin/
+obj/
+**/bin/
+**/obj/
