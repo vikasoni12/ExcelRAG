@@ -12,6 +12,8 @@
   <em>Excel as a visual, auditable RAG preparation pipeline</em>
 </p>
 
+*Diagram note: data flows from Excel tables → Excel-DNA UDFs → managed processing → export packages, keeping every intermediate artifact visible in the worksheet.*
+
 **ExcelRAG** is an Excel-DNA add-in that transforms Excel into a powerful, trustworthy workspace for preparing data used in RAG pipelines. It brings modern data prep and knowledge-curation workflows into Excel while keeping the experience formula-driven, transparent, and fully inspectable.
 
 The guiding idea:

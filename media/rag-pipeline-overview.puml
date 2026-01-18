@@ -5,30 +5,19 @@ skinparam defaultFontName Segoe UI
 skinparam defaultFontSize 14
 
 rectangle "Excel Workbook" as Excel {
-  [Sources Table]
-  [Chunk Table]
-  [Metadata Table]
-  [QA Checks]
+  [Sources]\n[Chunks]\n[Metadata]\n[QA]
 }
 
 rectangle "Excel-DNA Add-in" as AddIn {
-  [UDF Layer]
-  [Trigger Controller]
-  [Cache / Registry]
+  [UDFs]\n[Trigger]\n[Cache]
 }
 
 rectangle "Managed .NET Layer" as DotNet {
-  [Ingest & Parse]
-  [Normalize]
-  [Chunk]
-  [Metadata]
-  [Validate]
+  [Ingest]\n[Normalize]\n[Chunk]\n[Metadata]\n[Validate]
 }
 
 rectangle "Export" as Export {
-  [JSONL]
-  [Manifest]
-  [Provenance]
+  [JSONL]\n[Manifest]\n[Provenance]
 }
 
 cloud "Vector Store" as Vector
